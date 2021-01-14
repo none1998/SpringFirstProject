@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Movies</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1 align="center">Result</h1>
+<div style="margin-left: 40%">
+    <div class="floatchild" style="background-color: white; border-style: groove; border-radius: 10px">
+<h2 align="center" th:text="${movie.title}" />
+<p align="center" th:text="'Year: ' + ${movie.year}" />
+<p align="center" th:text="'Description: ' + ${movie.description}" />
+<p align="center" th:text="'Rating: ' + ${movie.rating}" />
+<img style="margin-left: 59px" th:src="${movie.image}" width="55%">
+    </div>
+</div>
+</br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+</br></br></br></br></br></br></br></br></br></br>
+<button style="margin-left: 44%" onclick="location.href = '/create'">Submit another message</button>
+</body>
+</html>

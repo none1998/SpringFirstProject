@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Movies</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+</head>
+<body>
+<div>
+    <p align="center" style="font-family: 'Abyssinica SIL'; font-size: 48px">Movie Website</p>
+</div>
+<div>
+    <div style="margin-left: 12%; float: left">
+        <div class="floatchild" style="float:left; background-color: white; border-style: groove; border-radius: 10px" th:each="m : ${m}">
+            </br>
+            <span class="movietitle" th:text="${m.title}">Name</span>
+            </br></br>
+            <img style="margin-left: 45px" th:src="${m.image}" width="55%">
+            </br>
+            <span style="margin-left: 45px; font-family: 'Abyssinica SIL'; font-size: 18px" th:text="${m.year}"></span>
+            </br>
+            <span style="margin-left: 45px; font-family: 'Abyssinica SIL'; font-size: 18px" th:text="${m.rating}"></span>
+            </br>
+            <div style="margin-left: 45px; margin-right: 45px; font-family: 'Abyssinica SIL'; font-size: 18px" th:text="${m.description}"></div>
+            </br></br></br>
+        </div>
+    </div>
+    <div style="float: right">
+        <iframe style="margin-right:22%; float:right;" width="720" height="404" th:src="@{${m.link}}"   frameborder="0" alt="no video attached" allowfullscreen="1"></iframe>
+    </div>
+</div>
+</body>
+</html>

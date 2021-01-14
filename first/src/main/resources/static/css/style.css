@@ -1,0 +1,16 @@
+.movietitle {
+    font-size : 24px;
+    font-family: 'Abyssinica SIL';
+    margin-left: 45px
+}
+
+li{
+    list-style-type:none
+}
+
+.floatchild {
+    width: 270px;
+    height: 400px;
+    float: left;
+    padding: 0px;
+}
